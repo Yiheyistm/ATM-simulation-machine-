@@ -50,7 +50,7 @@ int color(int);
     cout<< "Deposit some amount of money:";
     cin>>money;
     sleep(2);
-    //tName=name;
+    tName=name;
    }
 }atm;
 
@@ -63,13 +63,13 @@ void ATM::new_user(bool flag,float uAcc){
     if(flag){
      atm.getData(uAcc);
       file.write((char*)&atm, sizeof(atm));
-    //  file.close();
+     file.close();
      atm.color(10);
     cout<<"\nSuccessfully Registered";
     sleep(3);
     atm.color(14);
     system("cls");
-   // atm.menu(uAcc,tName);
+    atm.menu(uAcc,tName);
 
       }
 
